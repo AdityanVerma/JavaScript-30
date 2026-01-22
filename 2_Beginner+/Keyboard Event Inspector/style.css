@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+/* container */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+#insert {
+    max-width: 90%;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+th, td {
+    padding: 10px;
+}

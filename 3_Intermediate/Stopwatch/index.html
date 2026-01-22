@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Stopwatch Display -->
+        <section aria-label="Stopwatch Display">
+            <time id="stopwatch">00:00:00.00</time>
+        </section>
+
+        <!-- Controls -->
+        <nav class="btns" aria-label="Stopwatch Controls">
+            <button id="start">START</button>
+            <button id="pause" disabled>PAUSE</button>
+            <button id="resume" disabled>RESUME</button>
+            <button id="split" disabled>SPLIT</button>
+            <button id="reset" disabled>RESET</button>
+        </nav>
+
+        <!-- Laps Section -->
+        <section class="laps-section" aria-label="Lap Times">
+            <ul class="laps">
+                <!-- Example lap item -->
+                <!--
+                    <li>
+                        <span class="lap-index">#1</span>
+                        <time class="lap-time">00:10:23</time>
+                        <time class="total-time">00:30:45</time>
+                    </li>
+                -->
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+  
