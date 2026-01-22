@@ -6,7 +6,6 @@
 - ✅ Keyboard Event Inspector  
 - To-Do List  
 - Calculator  
-- Password Generator  
 
 ## 🟡 Level 2 – Beginner+
 - ✅ BMI Calculator  
@@ -19,6 +18,7 @@
 ## 🟠 Level 3 – Intermediate
 - ✅ Stopwatch  ⭐
 - ✅ Unlimited Colors  
+- ✅ Password Generator  
 - Weather App  
 - Notes App  
 - Search & Filter App  
