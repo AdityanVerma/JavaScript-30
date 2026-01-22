@@ -1,0 +1,98 @@
+:root {
+    --main-bg: #212121;
+
+    --primary-bg-section: #30364f;
+    --secondary-bg-section: #acbac4;
+
+    --primary-txt-col: #f0f0db;
+    --secondary-txt-col: #e1d9bc;
+
+    --font-heading: 4.5rem;
+    --font-text: 1.2rem;
+    --font-password: 1.25rem;
+}
+
+main {
+    height: 100vh;
+    background-color: var(--main-bg);
+}
+
+.generator {
+    background-color: var(--primary-bg-section);
+    color: var(--primary-txt-col);
+    border: 1px solid #6666667e;
+    border-radius: 20px;
+    text-align: center;
+    padding: 3rem;
+    min-width: 30rem;
+    justify-content: baseline;
+}
+
+.heading {
+    width: 100%;
+}
+h1 {
+    font-size: var(--font-heading);
+}
+p {
+    font-size: var(--font-text);
+}
+
+.passSec {
+    justify-content: baseline;
+    flex-direction: column;
+    font: var(--font-text);
+    max-width: 100%;
+    margin: 20px;
+    margin-top: 20px;
+}
+.passSec label {
+    margin-bottom: 7px;
+}
+.passSec .passBox {
+    flex-direction: row;
+    width: 100%;
+}
+.passSec .passBox input[type="text"] {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: var(--font-password);
+    border-radius: 5px 0 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.passSec .passBox #copy-btn {
+    width: 10%;
+    background: var(--secondary-bg-section);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.settings {
+    justify-content: space-evenly;
+    background-color: var(--main-bg);
+    color: var(--primary-txt-col);
+    font: var(--font-text);
+    max-width: 100%;
+    margin: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 1rem 3rem;
+    gap: 40px;
+}
+.settings > div {
+    gap: 8px;
+}
+.settings input[type="range"] {
+    width: 150px;
+}
+.settings input[type="checkbox"] {
+    transform: scale(
+        1.5
+    ); /* Scales the checkbox to 1.5 times its original size */
+    /* Add vendor prefixes for wider browser support if necessary, though modern browsers often don't need them */
+    -ms-transform: scale(1.5); /* IE */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+}

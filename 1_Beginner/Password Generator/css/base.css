@@ -1,0 +1,171 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Lato&family=Merriweather:ital,opsz@0,18..144;1,18..144&family=Montserrat:ital@0;1&family=Nunito:ital@0;1&family=Open+Sans:ital@0;1&family=Poppins&family=Raleway:ital@0;1&family=Roboto:ital@0;1&display=swap");
+
+/* ----------------------------------- CSS RESET & BASE ELEMENT STYLES ----------------------------------- */
+
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+}
+
+html,
+:host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(
+        --default-font-family,
+        ui-sans-serif,
+        system-ui,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji"
+    );
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+}
+
+hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+}
+
+abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
+
+a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+}
+
+/* ---------------------------------------------- FONT-STYLES ---------------------------------------------- */
+/* =========================
+    SERIF FONTS
+========================= */
+
+.font-merriweather {
+    font-family: "Merriweather", Georgia, "Times New Roman", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.font-times {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* =========================
+    SANS-SERIF FONTS
+========================= */
+
+.font-roboto {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.font-open-sans {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.font-montserrat {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-raleway {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-lato {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-poppins {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-nunito {
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-arial {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-helvetica {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* =========================
+    MONOSPACE (CODE)
+========================= */
+
+.font-fira-code {
+    font-family: "Fira Code", Consolas, "Courier New", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ---------------------------------------------- UNIVERSAL CLASSES ---------------------------------------------- */
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
