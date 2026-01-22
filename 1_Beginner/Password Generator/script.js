@@ -49,8 +49,14 @@ symbols_check.addEventListener("change", generate_password);
 
 // -------------------------- Copy Password Func() --------------------------
 copy_button.addEventListener("click", () => {
-
     navigator.clipboard.writeText(generate_password_display.value);
+
+    const original = copy_button.innerHTML;
+    copy_button.innerHTML = "Copied!";
+
+    setTimeout(() => {
+        copy_button.innerHTML = original;
+    }, 1200);
 });
 
 
