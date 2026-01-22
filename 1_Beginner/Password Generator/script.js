@@ -20,12 +20,16 @@ let password_length = Number(range_slider.value);   // Typecasting String to Num
 range_display.textContent = range_slider.value;     // dispose slider range value
 
 
-// --------------------------- Random Char Func() ---------------------------
+// ------------------------ Generate Password Func() ------------------------
 // This helper function (optional) can be used to
-// separate random character generation logic
-function getRandomChar(range) {
+// separate random password generation logic
+function generatePassword(pool, password_length) {
 
-    return range[Math.floor(Math.random() * range.length)];
+    let result = "";
+    for (let i = 0; i < password_length; i++) {
+        result +=pool[Math.floor(Math.random() * pool.length)]
+    }
+    return result;
 }
 
 
@@ -49,37 +53,38 @@ symbols_check.addEventListener("change", generate_password);
 
 // -------------------------- Copy Password Func() --------------------------
 copy_button.addEventListener("click", () => {
-
+    
     navigator.clipboard.writeText(generate_password_display.value);
+
+    const original = copy_button.innerHTML;
+    copy_button.innerHTML = "Copied!";
+
+    setTimeout(() => {
+        copy_button.innerHTML = original;
+    }, 1200);
 });
 
 
-// ------------------------ Generate Password Func() ------------------------
+// ------------------------- Update Password Func() -------------------------
 // This function is responsible for:
 // 1. Building the allowed character pool
 // 2. Generating a random password of selected length
 // 3. Updating the password display input
-function generate_password()
+function updatePassword()
 {
     // checking the availability of characters
-    let range = alphabet_lower + alphabet_upper;
+    let pool = alphabet_lower + alphabet_upper;
 
     if (numbers_check.checked) {
-        range += numbers;
+        pool += numbers;
     }
     
     if (symbols_check.checked) {
-        range += symbols;
+        pool += symbols;
     }
 
-    let password = ""; // password container
-
-    // HERE: generating password
-    for (let i = 0; i < password_length; i++) {
-        password += getRandomChar(range);
-    }
-
-    // password display manipulation
+    // HERE: generating and updating new password
+    let password = generatePassword(pool, password_length); // password container
     generate_password_display.value = password;
 }
-generate_password();
+updatePassword();
