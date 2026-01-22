@@ -1,43 +1,82 @@
 "use strict";
 
-// -----> password display block refrences
+// --------------------------- Refrencing Items ---------------------------
 const generate_password_display = document.getElementById("password");
 const copy_button = document.getElementById("copy-btn");
 
-// -----> password manipulation block refrences
 const range_slider = document.getElementById("range");
 const range_display = document.getElementById("range-display");
-const number_check = document.getElementById("numbers");
+const numbers_check = document.getElementById("numbers");
 const symbols_check = document.getElementById("symbols");
 
-// -----> CODE LOGIC: -
-// ...
+// Define all character sets here. These act as the source pools from which
+// the password characters will be randomly selected.
 const alphabet_lower = "abcdefghijklmnopqrstuvwxyz";
 const alphabet_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()_+-={}[]:;<>,.?/";
 
-let password_length = range_slider.value;
-let numbers_include = false;
-let symbols_include = false;
+let password_length = Number(range_slider.value);   // Typecasting String to Number (for correctness & clarity)
+range_display.textContent = range_slider.value;     // dispose slider range value
 
-let range = alphabet_lower + alphabet_upper;
 
-// ---> function for slider length
+// --------------------------- Random Char Func() ---------------------------
+// This helper function (optional) can be used to
+// separate random character generation logic
+function getRandomChar(range) {
+
+    return range[Math.floor(Math.random() * range.length)];
+}
+
+
+// -------------------------- Slider Length Func() --------------------------
+// Listens for slider movement.
+// Updates the password length in real time,
 range_slider.addEventListener("input", function () {
-    password_length = range_slider.value;
-    range_display.textContent = range_slider.value;
-    generate_password();
+    
+    password_length = Number(range_slider.value);    // getting the slider value type-cast to Number()
+    range_display.textContent = range_slider.value;  // dispose slider range value
+    generate_password();                             // generating password with new length
 });
 
-// ---> function generating random password
-function generate_password() {
-    // password container
-    let password = "";
+
+// ------------------------- Checkbox Change Func() -------------------------
+// This section should listen for checkbox changes
+// and trigger password regeneration when toggled.
+numbers_check.addEventListener("change", generate_password);
+symbols_check.addEventListener("change", generate_password);
+
+
+// -------------------------- Copy Password Func() --------------------------
+copy_button.addEventListener("click", () => {
+
+    navigator.clipboard.writeText(generate_password_display.value);
+});
+
+
+// ------------------------ Generate Password Func() ------------------------
+// This function is responsible for:
+// 1. Building the allowed character pool
+// 2. Generating a random password of selected length
+// 3. Updating the password display input
+function generate_password()
+{
+    // checking the availability of characters
+    let range = alphabet_lower + alphabet_upper;
+
+    if (numbers_check.checked) {
+        range += numbers;
+    }
+    
+    if (symbols_check.checked) {
+        range += symbols;
+    }
+
+    let password = ""; // password container
 
     // HERE: generating password
     for (let i = 0; i < password_length; i++) {
-        password += range[Math.floor(Math.random() * range.length)];
+        password += getRandomChar(range);
     }
 
     // password display manipulation

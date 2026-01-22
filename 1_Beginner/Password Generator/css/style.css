@@ -69,6 +69,14 @@ p {
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
+#copy-btn svg {
+  display: inline-block;
+  transition: transform 0.05s ease;
+}
+#copy-btn:active svg {
+  transform: scale(1.2);
+}
+
 
 .settings {
     justify-content: space-evenly;
