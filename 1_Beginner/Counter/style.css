@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
     margin: 0;
@@ -6,17 +6,13 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     color: #fff;
     text-align: center;
-}
-
-/* container */
-
-.container {
-    background-color: #212121;
+    background-color: #061e29;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,25 +20,37 @@ body {
     height: 100vh;
 }
 
-.container #display {
-    background-color: rgb(180, 180, 180);
-    color: #212121;
-    font-size: 50px;
-    padding: 20px 40px;
-    margin: 10px;
-    border-radius: 10px;
+button {
+    border: none;
 }
 
-.btns {
-    margin-right: 20px;
+.styleIt {
+    background-color: #1d546d;
+    color: #f3f4f4;
+    border: 1px solid #061e29;
 }
-.btns button {
-    background-color: rgb(180, 180, 180);
-    color: #212121;
+
+/* container */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.container #display {
+    grid-column: 1 / -1; /* spans all 3 columns */
+    font-size:90px;
+    line-height:90px;
+    padding: 30px 40px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+button {
     font-size: 1.3rem;
     padding: 10px 20px;
     margin: 10px;
-    border: 1px solid #212121;
     border-radius: 10px;
     cursor: pointer;
 }

@@ -4,14 +4,19 @@ let counterDown = document.getElementById('counter-down');
 let counterReset = document.getElementById('reset');
 let counterUp = document.getElementById('counter-up');
 
+let count = 0;
+
 counterDown.addEventListener('click', () => {
-    counterDisplay.innerHTML--;
+    count--;
+    counterDisplay.textContent = count;
 });
 
 counterReset.addEventListener('click', () => {
-    counterDisplay.innerHTML = `0`;
+    count = 0;
+    counterDisplay.textContent = count;
 });
 
 counterUp.addEventListener('click', () => {
-    counterDisplay.innerHTML++;
+    count++;
+    counterDisplay.textContent = count;
 });
