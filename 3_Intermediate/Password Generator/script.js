@@ -40,15 +40,15 @@ range_slider.addEventListener("input", function () {
     
     password_length = Number(range_slider.value);    // getting the slider value type-cast to Number()
     range_display.textContent = range_slider.value;  // dispose slider range value
-    generate_password();                             // generating password with new length
+    updatePassword();                             // generating password with new length
 });
 
 
 // ------------------------- Checkbox Change Func() -------------------------
 // This section should listen for checkbox changes
 // and trigger password regeneration when toggled.
-numbers_check.addEventListener("change", generate_password);
-symbols_check.addEventListener("change", generate_password);
+numbers_check.addEventListener("change", updatePassword);
+symbols_check.addEventListener("change", updatePassword);
 
 
 // -------------------------- Copy Password Func() --------------------------
