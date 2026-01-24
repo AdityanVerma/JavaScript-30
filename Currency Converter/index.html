@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container font-raleway">
+        <main>
+
+            <section>
+                <div class="labels">
+                    <label for="entered-value">From</label>
+                    <label for="currency-from">Currency Type</label>
+                </div>
+                <div class="inputs">
+                    <input type="number" min="0" value="0" id="entered-value" class="font-fira-code">
+                    <input type="text" id="currency-from">
+                </div>
+            </section>
+
+            <button id="btn-swap">swap</button>
+
+            <section>
+                <div class="labels">
+                    <label for="evaluated-value">To</label>
+                    <label for="currency-to">Currency Type</label>
+                </div>
+                <div class="inputs">
+                    <input type="number" min="0" value="0" id="evaluated-value" class="font-fira-code">
+                    <input type="text" id="currency-to">
+                </div>
+            </section>
+
+            <button id="btn-convert">Convert USD to INR</button>
+
+        </main>
+    </div>
+</body>
+
+</html>
