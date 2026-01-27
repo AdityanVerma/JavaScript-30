@@ -15,12 +15,13 @@
 
             <section>
                 <div class="labels">
-                    <label for="entered-value">From</label>
+                    <label for="value-entered">From</label>
                     <label for="currency-from">Currency Type</label>
                 </div>
                 <div class="inputs">
-                    <input type="number" min="0" value="0" id="entered-value" class="font-fira-code">
-                    <input type="text" id="currency-from">
+                    <input type="number" min="0" value="0" id="value-entered" class="font-fira-code">
+                    <select name="text" id="currency-from">
+                    </select>
                 </div>
             </section>
 
@@ -28,19 +29,22 @@
 
             <section>
                 <div class="labels">
-                    <label for="evaluated-value">To</label>
+                    <label for="value-evaluated">To</label>
                     <label for="currency-to">Currency Type</label>
                 </div>
                 <div class="inputs">
-                    <input type="number" min="0" value="0" id="evaluated-value" class="font-fira-code">
-                    <input type="text" id="currency-to">
+                    <input type="number" min="0" value="0" id="value-evaluated" class="font-fira-code" readonly>
+                    <select name="text" id="currency-to">
+                    </select>
                 </div>
             </section>
 
-            <button id="btn-convert">Convert USD to INR</button>
+            <button id="btn-convert" class="font-poppins">Convert USD to INR</button>
 
         </main>
     </div>
 </body>
+
+<script type="module" src="./scripts/main.js"></script>
 
 </html>

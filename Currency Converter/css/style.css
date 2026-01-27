@@ -4,7 +4,7 @@
     width: 100vw;
     justify-content: center;
     align-items: center;
-    color: #b4b4b4;
+    color: #979797;
 
     background-image: url("../assets/bg.jpg");
     background-repeat: no-repeat;
@@ -22,11 +22,14 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px;
+    background-color: #00000055;
+    padding: 3rem;
+    width: 35rem;
     border: 0.5px solid #ffffff90;
     border-radius: 10px;
-    background-color: #00000055;
 }
+
+/* SECTION */
 
 section {
     display: flex;
@@ -34,17 +37,47 @@ section {
     background-color: white;
     border: 2px solid #00000020;
     border-radius: 10px;
-    padding: 20px;
+    padding: 1rem;
+    width: 100%;
 }
 section .labels {
     display: flex;
-    font-size: 1.2rem;
     justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.05rem;
     width: 100%;
 }
 section .inputs {
-    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0.6rem;
 }
+section .inputs input {
+    padding: 5px;
+    margin-left: -5px;
+    width: 40%;
+    font-size: 1.005rem;
+}
+section .inputs select {
+    background-color: #90909025;
+    color: #000;
+    font-size: 1.005rem;
+    padding: 0.25rem;
+    padding-right: 2rem;
+    border-radius: 5px;
+}
+section .inputs select:focus {
+    background-color: #90909050;
+    color: #000;
+    font-size: 1.005rem;
+    padding: 0.25rem;
+    padding-right: 2rem;
+    border-radius: 5px;
+}
+
+/* BUTTONS */
 
 #btn-convert {
     width: 100%;
@@ -58,12 +91,13 @@ section .inputs {
 }
 
 #btn-swap {
-    font-size: 1rem;
+    font-size: 1.125rem;
     color: #fff;
     background-color: #285ae4;
+    font-weight: 500;
     border: 2px solid #fff;
     border-radius: 10px;
-    padding:  10px 15px;
+    padding:  0.5rem 0.75rem;
     cursor: pointer;
     margin-top: -10px;
     margin-bottom: -10px;
